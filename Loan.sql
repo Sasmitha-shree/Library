@@ -1,0 +1,27 @@
+CREATE TABLE Loan (
+Loan_id VARCHAR(20) PRIMARY KEY,
+Member_id VARCHAR(20) NOT NULL,
+Book_id VARCHAR(20) NOT NULL,
+Issue_date DATE NULL,
+Due_date DATE NULL,
+Return_date DATE NULL,
+FOREIGN KEY (Member_id) REFERENCES Member(Member_id),
+FOREIGN KEY (Book_id) REFERENCES Book(Book_id)
+);
+INSERT INTO Loan (Loan_id, Member_id, Book_id, Issue_date, Due_date, Return_date) VALUES
+('L001', 'M001', 'B001', '2025-01-10', '2025-11-24', NULL),
+('L002', 'M002', 'B004', '2025-11-05', '2025-11-20', '2025-11-18'),
+('L003', 'M003', 'B002', NULL,NULL, NULL),
+('L004', 'M004', 'B005', '2025-12-02', '2025-12-22', NULL),
+('L005', 'M005', 'B005', '2025-01-15', '2025-01-30', '2025-01-29'),
+('L006', 'M006', 'B006', '2025-02-10', '2025-02-25', NULL),
+('L007', 'M007', 'B002', '2025-03-01', '2025-03-15', '2025-03-14'),
+('L008', 'M008', 'B008', '2025-03-05', '2025-03-20', NULL),
+('L009', 'M009', 'B009', '2025-04-10', '2025-04-25', NULL),
+('L010', 'M010', 'B005', '2025-04-12', '2025-04-28', '2025-04-26'),
+('L011', 'M001', 'B004', '2025-05-01', '2025-05-16', NULL),
+('L012', 'M002', 'B002', '2025-05-05', '2025-05-20', '2025-05-18'),
+('L013', 'M003', 'B003', '2025-05-08', '2025-05-25', NULL),
+('L014', 'M004', 'B001', '2025-06-10', '2025-06-30', NULL),
+('L015', 'M005', 'B005', '2025-06-12', '2025-07-01', '2025-06-30');
+SELECT * FROM Loan;
