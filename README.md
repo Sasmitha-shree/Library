@@ -1,5 +1,5 @@
 # Library
-
+---
 ## Project Overview
 The City Central Library Management System is a database-driven project designed to manage library operations efficiently.  
 It handles books, authors, publishers, members, loans, reservations, staff, and fines using structured SQL queries and relational database concepts.
